@@ -18,7 +18,7 @@
             <img src="rrr.png" alt="Rashi Goenka Logo" class="h-8 md:h-10 w-auto object-contain">
         </a>
         
-        <div class="hidden md:flex gap-8 items-center font-bold text-sm tracking-widest">
+        <div class="hidden md:flex gap-8 items-center font-bold text-sm tracking-widest uppercase">
             <a href="index.html" class="text-white border-b border-white">HOME</a>
             <a href="work.html" class="hover:text-zinc-500 transition">WORK</a>
             <a href="skills.html" class="hover:text-zinc-500 transition">SKILLS</a>
@@ -33,23 +33,23 @@
     </nav>
 
     <div id="menu" class="fixed inset-0 bg-zinc-950 z-[80] flex items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
-        <button id="close-btn" class="absolute top-8 right-8 text-4xl">&times;</button>
+        <button id="close-btn" class="absolute top-8 right-8 text-4xl hover:text-zinc-500 transition">&times;</button>
         <div class="flex flex-col gap-6 text-center">
-            <a href="index.html" class="text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Home</a>
-            <a href="work.html" class="text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Work</a>
-            <a href="skills.html" class="text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Skills</a>
-            <a href="about.html" class="text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">About</a>
-            <a href="contact.html" class="text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Contact</a>
+            <a href="index.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Home</a>
+            <a href="work.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Work</a>
+            <a href="skills.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Skills</a>
+            <a href="about.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">About</a>
+            <a href="contact.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Contact</a>
         </div>
     </div>
 
     <main>
         <section class="min-h-screen flex items-center justify-center bg-black px-6" id="hero-section">
             <div class="hero-content text-center">
-                <h1 class="text-5xl md:text-8xl lg:text-[120px] font-black leading-none tracking-tighter opacity- translate-y-20 uppercase" id="hero-title">
+                <h1 class="text-6xl md:text-8xl lg:text-[120px] font-black leading-none tracking-tighter opacity- translate-y-20 uppercase" id="hero-title">
                     RASHI <br> GOENKA.
                 </h1><br><br>
-                <p class="mt-8 text-zinc-400 text-base md:text-xl max-w-xl mx-auto opacity- translate-y-10" id="hero-sub">
+                <p class="mt-8 text-zinc-400 text-base md:text-xl max-w-xl mx-auto opacity- translate-y-10 uppercase tracking-wide" id="hero-sub">
                     I like turning ideas into designs that people can easily understand and use.
                 </p>
             </div>
@@ -57,30 +57,30 @@
 
         <section class="py-20 px-6 md:px-12 bg-zinc-950 relative z-10" id="work-preview">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl md:text-6xl font-black mb-12 tracking-tighter uppercase">Featured Work</h2>
+                <h2 class="text-4xl md:text-6xl font-black mb-12 tracking-tighter uppercase">Featured Work</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    <div class="work-card relative group border border-white/10 rounded-3xl overflow-hidden aspect-video flex flex-col justify-end p-6 md:p-10 hover:border-white/20 transition-all">
-                        <img src="nintendo1.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="work-card relative group border border-white/10 rounded-3xl overflow-hidden aspect-video flex flex-col justify-end p-6 md:p-10">
+                        <img src="nintendo1.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                         <div class="relative z-10">
-                            <span class="text-zinc-500 font-mono text-xs mb-1 block">01 / BRANDING</span>
+                            <span class="text-zinc-500 font-mono text-xs mb-1 block uppercase">01 / BRANDING</span>
                             <h3 class="text-2xl md:text-3xl font-bold uppercase">Nintendo Redesign</h3>
                         </div>
                     </div>
 
-                    <div class="work-card relative group border border-white/10 rounded-3xl overflow-hidden aspect-video flex flex-col justify-end p-6 md:p-10 hover:border-white/20 transition-all">
-                        <img src="spotify.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="work-card relative group border border-white/10 rounded-3xl overflow-hidden aspect-video flex flex-col justify-end p-6 md:p-10">
+                        <img src="spotify.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-60">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                         <div class="relative z-10">
-                            <span class="text-zinc-500 font-mono text-xs mb-1 block">02 / UI/UX</span>
+                            <span class="text-zinc-500 font-mono text-xs mb-1 block uppercase">02 / UI/UX</span>
                             <h3 class="text-2xl md:text-3xl font-bold uppercase">Spotify Sing</h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-20 text-center">
-                    <a href="work.html" class="text-zinc-500 hover:text-white transition underline underline-offset-8 uppercase font-bold text-sm">
+                    <a href="work.html" class="text-zinc-500 hover:text-white transition underline underline-offset-8 uppercase font-bold text-sm tracking-widest">
                         View All Projects
                     </a>
                 </div>
@@ -106,56 +106,61 @@
                 <h3 class="text-3xl md:text-6xl font-bold leading-tight tracking-tighter">
                     I’m a designer who enjoys solving problems through visuals. I like keeping things <span class="text-white">simple but meaningful.</span>
                 </h3>
-                <a href="about.html" class="inline-block mt-10 bg-zinc-800 px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition">Read more</a>
+                <a href="about.html" class="inline-block mt-10 bg-zinc-800 px-8 py-3 rounded-full font-bold hover:bg-white hover:text-black transition uppercase text-sm tracking-widest">Read more</a>
             </div>
         </section>
 
         <footer class="bg-black py-20 px-6 md:px-12 border-t border-white/10 relative z-10">
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
                 <div>
-                    <h2 class="text-6xl md:text-9xl font-black tracking-tighter">SAY HI.</h2>
+                    <h2 class="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-none">SAY HI.</h2>
                     <a href="mailto:rashigoenka27@gmail.com" class="text-xl md:text-2xl text-zinc-500 hover:text-white transition break-all">rashigoenka27@gmail.com</a>
                 </div>
-                <div class="flex flex-wrap gap-6 md:gap-8 font-bold text-zinc-600 text-sm md:text-base">
+                <div class="flex flex-wrap gap-6 md:gap-8 font-bold text-zinc-600 text-sm md:text-base uppercase tracking-widest">
                     <a href="https://www.behance.net/rashigoenka" class="hover:text-white transition">BEHANCE</a>
                     <a href="https://linkedin.com/in/rashi-goenka-34b42027a" class="hover:text-white transition">LINKEDIN</a>
                     <a href="mailto:rashigoenka27@gmail.com" class="hover:text-white transition">MAIL</a>
                 </div>
             </div>
-            <div class="mt-20 text-zinc-800 font-mono text-xs">
-                © 2026 PORTFOLIO. ALL RIGHTS RESERVED.
+            <div class="mt-20 text-zinc-800 font-mono text-xs uppercase tracking-widest">
+                © 2026 Rashi Goenka. ALL RIGHTS RESERVED.
             </div>
         </footer>
     </main>
 
     <script src="script.js"></script>
     <script>
-        // --- MOBILE MENU LOGIC ---
+        // --- MOBILE MENU LOGIC (Synced with Work Page) ---
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const menu = document.getElementById('menu');
 
-        menuBtn.addEventListener('click', () => {
-            menu.style.transform = 'translateX(0)';
-        });
+        const openMenu = () => {
+            gsap.to(menu, { x: 0, duration: 0.8, ease: "expo.inOut" });
+            gsap.fromTo(".menu-link", 
+                { y: 50, opacity: 0 }, 
+                { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: "power3.out", delay: 0.3 }
+            );
+        };
 
-        closeBtn.addEventListener('click', () => {
-            menu.style.transform = 'translateX(100%)';
-        });
+        const closeMenu = () => {
+            gsap.to(menu, { x: "100%", duration: 0.8, ease: "expo.inOut" });
+        };
 
-        // Close menu when clicking a link
-        document.querySelectorAll('#menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.style.transform = 'translateX(100%)';
-            });
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
 
         // --- ENTRANCE ANIMATIONS ---
+        gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline();
-        tl.to("#hero-title", { opacity: 1, y: 0, duration: 1.5, ease: "expo.out" })
+        tl.to("#hero-title", { opacity: 1, y: 0, duration: 1.5, ease: "expo.out", delay: 0.2 })
           .to("#hero-sub", { opacity: 1, y: 0, duration: 1.2, ease: "expo.out" }, "-=1");
 
-        // --- SCROLL EFFECTS ---
+        // --- HERO PARALLAX ---
         gsap.to(".hero-content", {
             scrollTrigger: {
                 trigger: "#hero-section",
@@ -163,7 +168,7 @@
                 end: "bottom top",
                 scrub: true
             },
-            scale: 0.85,
+            scale: 0.9,
             opacity: 0,
             ease: "none"
         });

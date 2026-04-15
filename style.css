@@ -10,7 +10,6 @@
 body, html {
     background-color: #09090b; /* Zinc-950 equivalent */
     color: #fff;
-    /* Allow natural scrolling */
     overflow-x: hidden; 
     overflow-y: auto; 
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -32,23 +31,27 @@ body, html {
     transition: transform 0.1s ease;
 }
 
-/* Hide custom cursor on touch devices for better UX */
 @media (hover: none) and (pointer: coarse) {
     .custom-cursor {
         display: none;
     }
 }
 
-/* Section Layouts */
-.section {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 80px 5%;
+/* --- SKILLS PAGE FIXES --- */
+
+/* 1. Remove the CSS transition from progress-bar 
+      GSAP handles the timing, so CSS shouldn't interfere */
+.progress-bar {
+    width: 0; /* Start at 0 */
+    will-change: width; /* Optimization for smoother animation */
 }
+
+/* 2. Ensure the container (the track) is visible */
+.skill-item .bg-zinc-900 {
+    background-color: rgba(39, 39, 42, 1); /* Makes the "empty" part of the bar visible */
+}
+
+/* -------------------------- */
 
 /* Work Cards */
 .work-card {
@@ -66,46 +69,19 @@ nav {
     transition: background 0.3s ease, padding 0.3s ease;
 }
 
-/* Force links to uppercase for the premium look */
-nav a, #mobile-menu a {
+nav a, #menu a {
     letter-spacing: 0.1em;
-}
-
-/* Utility: Progress Bar for Skills Page */
-.progress-bar {
-    transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Adjust section padding for mobile */
-    .section {
-        padding: 60px 20px;
-    }
-
-    /* Scaling down huge titles for mobile screens */
     h1 {
         font-size: 3.5rem !important;
         line-height: 1 !important;
     }
-
-    /* Remove hover effect on mobile to prevent double-tap issues */
     .work-card:hover {
         transform: none;
     }
-}
-
-/* Custom Scrollbar (Optional) */
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    scroll-behavior: smooth;
 }
 
 /* Selection highlight */
@@ -114,7 +90,12 @@ html {
     color: #000;
 }
 
-/* Text Reveal Animation Helper */
-.reveal-text {
-    overflow: hidden;
+/* Hide scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }

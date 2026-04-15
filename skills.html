@@ -6,7 +6,15 @@
     <title>Skills | Rashi Goenka</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* This prevents CSS from blocking the GSAP animation */
+        .progress-bar {
+            width: 0%;
+            transition: none !important;
+        }
+    </style>
 </head>
 <body class="bg-zinc-950 text-white selection:bg-white selection:text-black overflow-x-hidden">
     
@@ -25,20 +33,20 @@
             <a href="contact.html" class="bg-white text-black px-5 py-2 rounded-full hover:bg-zinc-300 transition text-xs">CONTACT</a>
         </div>
 
-        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 items-end">
-            <span class="w-8 h-0.5 bg-white"></span>
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 items-end group">
+            <span class="w-8 h-0.5 bg-white group-hover:w-10 transition-all"></span>
             <span class="w-5 h-0.5 bg-white"></span>
         </button>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[80] flex items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
-        <button id="close-menu" class="absolute top-8 right-8 text-4xl">&times;</button>
-        <div class="flex flex-col gap-8 text-center">
-            <a href="index.html" class="text-5xl font-black uppercase tracking-tighter">Home</a>
-            <a href="work.html" class="text-5xl font-black uppercase tracking-tighter">Work</a>
-            <a href="skills.html" class="text-5xl font-black uppercase tracking-tighter text-zinc-500">Skills</a>
-            <a href="about.html" class="text-5xl font-black uppercase tracking-tighter">About</a>
-            <a href="contact.html" class="text-5xl font-black uppercase tracking-tighter">Contact</a>
+    <div id="menu" class="fixed inset-0 bg-zinc-950 z-[80] flex items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+        <button id="close-btn" class="absolute top-8 right-8 text-4xl hover:text-zinc-500 transition">&times;</button>
+        <div class="flex flex-col gap-6 text-center">
+            <a href="index.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Home</a>
+            <a href="work.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Work</a>
+            <a href="skills.html" class="menu-link text-5xl font-black text-zinc-500 transition uppercase tracking-tighter">Skills</a>
+            <a href="about.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">About</a>
+            <a href="contact.html" class="menu-link text-5xl font-black hover:text-zinc-500 transition uppercase tracking-tighter">Contact</a>
         </div>
     </div>
 
@@ -50,69 +58,69 @@
                     EXPERTISE<span class="text-zinc-700">.</span>
                 </h1>
                 <p class="text-zinc-400 text-base md:text-lg max-w-2xl leading-relaxed uppercase">
-                    A collection of tools and technologies I use to bring creative visions to life. Focused on precision, aesthetics, and user-centric design.
+                    A collection of tools and technologies I use to bring creative visions to life.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 md:gap-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
                 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe InDesign</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Adobe InDesign</span>
                         <span class="text-zinc-500 font-mono text-sm">96%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="96%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="96%"></div>
                     </div>
                 </div>
 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Procreate</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Procreate</span>
                         <span class="text-zinc-500 font-mono text-sm">98%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="98%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="98%"></div>
                     </div>
                 </div>
 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe Photoshop</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Adobe Photoshop</span>
                         <span class="text-zinc-500 font-mono text-sm">90%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="90%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="90%"></div>
                     </div>
                 </div>
 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Figma</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Figma</span>
                         <span class="text-zinc-500 font-mono text-sm">89%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="89%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="89%"></div>
                     </div>
                 </div>
 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe Illustrator</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Adobe Illustrator</span>
                         <span class="text-zinc-500 font-mono text-sm">95%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="95%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="95%"></div>
                     </div>
                 </div>
 
                 <div class="skill-item">
                     <div class="flex justify-between items-end mb-3">
-                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Canva</span>
+                        <span class="text-lg md:text-xl font-bold uppercase">Canva</span>
                         <span class="text-zinc-500 font-mono text-sm">98%</span>
                     </div>
-                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
-                        <div class="progress-bar h-full bg-white w-0" data-target="98%"></div>
+                    <div class="h-[2px] w-full bg-zinc-900">
+                        <div class="progress-bar h-full bg-white" data-target="98%"></div>
                     </div>
                 </div>
 
@@ -123,40 +131,43 @@
     <footer class="bg-black py-20 px-6 md:px-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
             <div>
-                <h2 class="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-none">Say Hi.</h2>
-                <a href="mailto:rashigoenka27@gmail.com" class="text-xl md:text-2xl text-zinc-500 hover:text-white transition">rashigoenka27@gmail.com</a>
-            </div>
-            <div class="flex flex-wrap gap-6 md:gap-8 font-bold text-zinc-600 uppercase text-sm">
-                <a href="https://www.behance.net/rashigoenka" target="_blank" class="hover:text-white">Behance</a>
-                <a href="https://linkedin.com/in/rashi-goenka-34b42027a" target="_blank" class="hover:text-white">LinkedIn</a>
-                <a href="mailto:rashigoenka27@gmail.com" class="hover:text-white">Mail</a>
+                <h2 class="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-none">Say Hi.</h2>
+                <a href="mailto:rashigoenka27@gmail.com" class="text-xl text-zinc-500 hover:text-white transition">rashigoenka27@gmail.com</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
-        // MOBILE MENU TRIGGER
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // MOBILE MENU
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const menu = document.getElementById('menu');
 
-        menuToggle.onclick = () => mobileMenu.style.transform = 'translateX(0)';
-        closeMenu.onclick = () => mobileMenu.style.transform = 'translateX(100%)';
+        menuBtn.onclick = () => {
+            gsap.to(menu, { x: 0, duration: 0.8, ease: "expo.inOut" });
+            gsap.fromTo(".menu-link", { y: 50, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: "power3.out", delay: 0.3 });
+        };
 
-        // GSAP Animations
-        window.addEventListener('DOMContentLoaded', () => {
+        closeBtn.onclick = () => {
+            gsap.to(menu, { x: "100%", duration: 0.8, ease: "expo.inOut" });
+        };
+
+        // SKILLS ANIMATION
+        window.addEventListener('load', () => {
+            // Bars animate to target
             gsap.to(".progress-bar", {
-                width: (index, target) => target.getAttribute('data-target'),
-                duration: 2,
+                width: (i, target) => target.getAttribute('data-target'),
+                duration: 2.5,
                 ease: "expo.out",
-                stagger: 0.15,
-                delay: 0.3
+                stagger: 0.2,
+                delay: 0.5
             });
-            
+
+            // Fade in the list items
             gsap.from(".skill-item", {
                 opacity: 0,
-                y: 20,
+                y: 30,
                 duration: 1,
                 stagger: 0.1,
                 ease: "power3.out"
