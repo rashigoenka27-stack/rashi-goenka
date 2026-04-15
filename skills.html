@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Rashi Goenka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-white selection:bg-white selection:text-black overflow-x-hidden">
+    
+    <div class="custom-cursor" id="cursor"></div>
+
+    <nav class="fixed top-0 w-full p-6 md:px-12 flex justify-between items-center z-[70] backdrop-blur-md bg-black/20 border-b border-white/5">
+        <a href="index.html" class="flex items-center">
+            <img src="rrr.png" alt="Rashi Goenka Logo" class="h-8 md:h-10 w-auto object-contain">
+        </a>
+        
+        <div class="hidden md:flex gap-8 items-center font-bold text-sm tracking-widest uppercase">
+            <a href="index.html" class="hover:text-zinc-500 transition">HOME</a>
+            <a href="work.html" class="hover:text-zinc-500 transition">WORK</a>
+            <a href="skills.html" class="text-white border-b border-white">SKILLS</a>
+            <a href="about.html" class="hover:text-zinc-500 transition">ABOUT</a>
+            <a href="contact.html" class="bg-white text-black px-5 py-2 rounded-full hover:bg-zinc-300 transition text-xs">CONTACT</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 items-end">
+            <span class="w-8 h-0.5 bg-white"></span>
+            <span class="w-5 h-0.5 bg-white"></span>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-zinc-950 z-[80] flex items-center justify-center translate-x-full transition-transform duration-500 ease-in-out">
+        <button id="close-menu" class="absolute top-8 right-8 text-4xl">&times;</button>
+        <div class="flex flex-col gap-8 text-center">
+            <a href="index.html" class="text-5xl font-black uppercase tracking-tighter">Home</a>
+            <a href="work.html" class="text-5xl font-black uppercase tracking-tighter">Work</a>
+            <a href="skills.html" class="text-5xl font-black uppercase tracking-tighter text-zinc-500">Skills</a>
+            <a href="about.html" class="text-5xl font-black uppercase tracking-tighter">About</a>
+            <a href="contact.html" class="text-5xl font-black uppercase tracking-tighter">Contact</a>
+        </div>
+    </div>
+
+    <main class="pt-32 md:pt-48 px-6 md:px-12 pb-20 max-w-6xl mx-auto">
+        <div class="flex flex-col gap-12 md:gap-16">
+            
+            <div class="text-left">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none mb-6 uppercase">
+                    EXPERTISE<span class="text-zinc-700">.</span>
+                </h1>
+                <p class="text-zinc-400 text-base md:text-lg max-w-2xl leading-relaxed uppercase">
+                    A collection of tools and technologies I use to bring creative visions to life. Focused on precision, aesthetics, and user-centric design.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 md:gap-y-12">
+                
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe InDesign</span>
+                        <span class="text-zinc-500 font-mono text-sm">96%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="96%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Procreate</span>
+                        <span class="text-zinc-500 font-mono text-sm">98%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="98%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe Photoshop</span>
+                        <span class="text-zinc-500 font-mono text-sm">90%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Figma</span>
+                        <span class="text-zinc-500 font-mono text-sm">89%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="89%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Adobe Illustrator</span>
+                        <span class="text-zinc-500 font-mono text-sm">95%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-lg md:text-xl font-bold tracking-tight uppercase">Canva</span>
+                        <span class="text-zinc-500 font-mono text-sm">98%</span>
+                    </div>
+                    <div class="h-[2px] w-full bg-zinc-900 overflow-hidden">
+                        <div class="progress-bar h-full bg-white w-0" data-target="98%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-20 px-6 md:px-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+            <div>
+                <h2 class="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-none">Say Hi.</h2>
+                <a href="mailto:rashigoenka27@gmail.com" class="text-xl md:text-2xl text-zinc-500 hover:text-white transition">rashigoenka27@gmail.com</a>
+            </div>
+            <div class="flex flex-wrap gap-6 md:gap-8 font-bold text-zinc-600 uppercase text-sm">
+                <a href="https://www.behance.net/rashigoenka" target="_blank" class="hover:text-white">Behance</a>
+                <a href="https://linkedin.com/in/rashi-goenka-34b42027a" target="_blank" class="hover:text-white">LinkedIn</a>
+                <a href="mailto:rashigoenka27@gmail.com" class="hover:text-white">Mail</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // MOBILE MENU TRIGGER
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.onclick = () => mobileMenu.style.transform = 'translateX(0)';
+        closeMenu.onclick = () => mobileMenu.style.transform = 'translateX(100%)';
+
+        // GSAP Animations
+        window.addEventListener('DOMContentLoaded', () => {
+            gsap.to(".progress-bar", {
+                width: (index, target) => target.getAttribute('data-target'),
+                duration: 2,
+                ease: "expo.out",
+                stagger: 0.15,
+                delay: 0.3
+            });
+            
+            gsap.from(".skill-item", {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power3.out"
+            });
+        });
+    </script>
+</body>
+</html>
